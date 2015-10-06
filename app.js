@@ -22,8 +22,6 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     };
     return dailyCookies;
   };
-
-
 }
 var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
 var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
