@@ -1,14 +1,15 @@
-var pikeHours = [];
-var seaTacHours = [];
-var southcenterHours = [];
-var bellSqHours = [];
-var alkiHours = [];
+//var pikePlaceHours = []; // Moved to object.
+//var seaTacHours = [];
+//var southcenterHours = [];
+//var bellSqHours = [];
+//var alkiHours = [];
 
 var pikePlace = {
   location: 'Pike Place Market',
   minCust: 17,
   maxCust: 88,
   avgCookiePerCust: 5.2,
+  hour: [],
 
   randCustPerHour: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -16,14 +17,14 @@ var pikePlace = {
   totalCookiePerHour: function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    pikeHours.push(total);
+    this.hour.push(total);
     return total;
   },
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
       dailyCookies = dailyCookies + this.totalCookiePerHour();
-      console.log(dailyCookies);
+      console.log('Cookie count ' + dailyCookies);
     };
     return dailyCookies;
   }
@@ -34,6 +35,7 @@ var seaTac = {
   minCust: 6,
   maxCust: 44,
   avgCookiePerCust: 1.2,
+  hour: [],
 
   randCustPerHour: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -41,7 +43,7 @@ var seaTac = {
   totalCookiePerHour: function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    seaTacHours.push(total);
+    this.hour.push(total);
     return total;
   },
   totalCookiePerDay: function() {
@@ -58,6 +60,7 @@ var southcenter = {
   minCust: 11,
   maxCust: 38,
   avgCookiePerCust: 1.9,
+  hour: [],
 
   randCustPerHour: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -65,7 +68,7 @@ var southcenter = {
   totalCookiePerHour: function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    southcenterHours.push(total);
+    southcenter.hour.push(total);
     return total;
   },
   totalCookiePerDay: function() {
@@ -82,6 +85,7 @@ var bellSq = {
   minCust: 20,
   maxCust: 48,
   avgCookiePerCust: 3.3,
+  hour: [],
 
   randCustPerHour: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -89,7 +93,7 @@ var bellSq = {
   totalCookiePerHour: function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    bellSqHours.push(total);
+    bellSq.hour.push(total);
     return total;
   },
   totalCookiePerDay: function() {
@@ -106,6 +110,7 @@ var alki = {
   minCust: 3,
   maxCust: 24,
   avgCookiePerCust: 2.6,
+  hour: [],
 
   randCustPerHour: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
@@ -113,7 +118,7 @@ var alki = {
   totalCookiePerHour: function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    alkiHours.push(total);
+    alki.hour.push(total);
     return total;
   },
   totalCookiePerDay: function() {
@@ -150,11 +155,11 @@ bellSqTotal.innerHTML = Math.floor(bellSq.totalCookiePerDay());
 var alkiTotal = document.getElementById('alkiTotal');
 alkiTotal.innerHTML = Math.floor(alki.totalCookiePerDay());
 
-makeUL(pikeHours, 'pike');
-makeUL(seaTacHours, 'seaTac');
-makeUL(southcenterHours, 'southcenter');
-makeUL(bellSqHours, 'bellSq');
-makeUL(alkiHours, 'alki');
+makeUL(pikePlace.hour, 'pike');
+makeUL(seaTac.hour, 'seaTac');
+makeUL(southcenter.hour, 'southcenter');
+makeUL(bellSq.hour, 'bellSq');
+makeUL(alki.hour, 'alki');
 
 
 
