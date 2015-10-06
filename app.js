@@ -1,8 +1,37 @@
-//var pikePlaceHours = []; // Moved to objects.
-//var seaTacHours = [];
-//var southcenterHours = [];
-//var bellSqHours = [];
-//var alkiHours = [];
+// Here for Tuesdays lab assignment.
+/*var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
+  this.standLoc = standLoc;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookiePerCust = avgCookiePerCust;
+  this.hour = [];
+
+  this.randCustPerHour = function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+  };
+  this.totalCookiePerHour = function(){
+    var total = 0;
+    total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
+    this.hour.push(total);
+    return total;
+  };
+  this.totalCookiePerDay = function() {
+    var dailyCookies = 0;
+    for (var i = 0; i < 8; i++) {
+      dailyCookies += this.totalCookiePerHour();
+      console.log('Cookie count ' + dailyCookies);
+    };
+    return dailyCookies;
+  };
+
+
+}
+var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
+var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
+var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
+var bellSq = new CookieStand('Bellevue', 20, 48, 3.3);
+var alki = new CookieStand('Alki Beach', 3, 24, 2.6);*/
+
 
 var pikePlace = {
   location: 'Pike Place Market',
