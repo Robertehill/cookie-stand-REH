@@ -5,4 +5,4 @@ Model a salmon cookie stand.
 Moved arrays to be inside the objects.
 
 10/06/2015 - 10:17 am
-shortened the "daily cookie" lines buu using +=
+shortened the "daily cookie" lines by using +=
