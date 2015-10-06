@@ -1,4 +1,4 @@
-//var pikePlaceHours = []; // Moved to object.
+//var pikePlaceHours = []; // Moved to objects.
 //var seaTacHours = [];
 //var southcenterHours = [];
 //var bellSqHours = [];
@@ -23,7 +23,7 @@ var pikePlace = {
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
-      dailyCookies = dailyCookies + this.totalCookiePerHour();
+      dailyCookies += this.totalCookiePerHour();
       console.log('Cookie count ' + dailyCookies);
     };
     return dailyCookies;
@@ -49,7 +49,7 @@ var seaTac = {
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
-      dailyCookies = dailyCookies + this.totalCookiePerHour();
+      dailyCookies += this.totalCookiePerHour();
       console.log(dailyCookies);
     };
     return dailyCookies;
@@ -74,7 +74,7 @@ var southcenter = {
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
-      dailyCookies = dailyCookies + this.totalCookiePerHour();
+      dailyCookies += this.totalCookiePerHour();
       console.log(dailyCookies);
     };
     return dailyCookies;
@@ -99,7 +99,7 @@ var bellSq = {
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
-      dailyCookies = dailyCookies + this.totalCookiePerHour();
+      dailyCookies += this.totalCookiePerHour();
       console.log(dailyCookies);
     };
     return dailyCookies;
@@ -124,7 +124,7 @@ var alki = {
   totalCookiePerDay: function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
-      dailyCookies = dailyCookies + this.totalCookiePerHour();
+      dailyCookies += this.totalCookiePerHour();
       console.log(dailyCookies);
     };
     return dailyCookies;
