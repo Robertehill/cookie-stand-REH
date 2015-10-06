@@ -31,8 +31,6 @@ var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
 var bellSq = new CookieStand('Bellevue', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
 
-
-
 function makeUL(array, locID) {
     for(var i = 0; i < array.length; i++) {
         var dayList = document.getElementById(locID);
