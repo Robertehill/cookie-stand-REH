@@ -1,135 +1,34 @@
-//var pikePlaceHours = []; // Moved to objects.
-//var seaTacHours = [];
-//var southcenterHours = [];
-//var bellSqHours = [];
-//var alkiHours = [];
+var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
+  this.standLoc = standLoc;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookiePerCust = avgCookiePerCust;
+  this.hour = [];
 
-var pikePlace = {
-  location: 'Pike Place Market',
-  minCust: 17,
-  maxCust: 88,
-  avgCookiePerCust: 5.2,
-  hour: [],
-
-  randCustPerHour: function(){
+  this.randCustPerHour = function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-  totalCookiePerHour: function(){
+  };
+  this.totalCookiePerHour = function(){
     var total = 0;
     total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
     this.hour.push(total);
     return total;
-  },
-  totalCookiePerDay: function() {
+  };
+  this.totalCookiePerDay = function() {
     var dailyCookies = 0;
     for (var i = 0; i < 8; i++) {
       dailyCookies += this.totalCookiePerHour();
       console.log('Cookie count ' + dailyCookies);
     };
     return dailyCookies;
-  }
+  };
 }
+var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
+var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
+var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
+var bellSq = new CookieStand('Bellevue', 20, 48, 3.3);
+var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
 
-var seaTac = {
-  location: 'Seatac Airport',
-  minCust: 6,
-  maxCust: 44,
-  avgCookiePerCust: 1.2,
-  hour: [],
-
-  randCustPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-  totalCookiePerHour: function(){
-    var total = 0;
-    total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    this.hour.push(total);
-    return total;
-  },
-  totalCookiePerDay: function() {
-    var dailyCookies = 0;
-    for (var i = 0; i < 8; i++) {
-      dailyCookies += this.totalCookiePerHour();
-      console.log(dailyCookies);
-    };
-    return dailyCookies;
-  }
-}
-var southcenter = {
-  location: 'Southcenter Mall',
-  minCust: 11,
-  maxCust: 38,
-  avgCookiePerCust: 1.9,
-  hour: [],
-
-  randCustPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-  totalCookiePerHour: function(){
-    var total = 0;
-    total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    southcenter.hour.push(total);
-    return total;
-  },
-  totalCookiePerDay: function() {
-    var dailyCookies = 0;
-    for (var i = 0; i < 8; i++) {
-      dailyCookies += this.totalCookiePerHour();
-      console.log(dailyCookies);
-    };
-    return dailyCookies;
-  }
-}
-var bellSq = {
-  location: 'Bellevue Square',
-  minCust: 20,
-  maxCust: 48,
-  avgCookiePerCust: 3.3,
-  hour: [],
-
-  randCustPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-  totalCookiePerHour: function(){
-    var total = 0;
-    total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    bellSq.hour.push(total);
-    return total;
-  },
-  totalCookiePerDay: function() {
-    var dailyCookies = 0;
-    for (var i = 0; i < 8; i++) {
-      dailyCookies += this.totalCookiePerHour();
-      console.log(dailyCookies);
-    };
-    return dailyCookies;
-  }
-}
-var alki = {
-  location: 'Alki',
-  minCust: 3,
-  maxCust: 24,
-  avgCookiePerCust: 2.6,
-  hour: [],
-
-  randCustPerHour: function(){
-    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
-  },
-  totalCookiePerHour: function(){
-    var total = 0;
-    total = Math.floor (this.randCustPerHour() * this.avgCookiePerCust);
-    alki.hour.push(total);
-    return total;
-  },
-  totalCookiePerDay: function() {
-    var dailyCookies = 0;
-    for (var i = 0; i < 8; i++) {
-      dailyCookies += this.totalCookiePerHour();
-      console.log(dailyCookies);
-    };
-    return dailyCookies;
-  }
-}
 function makeUL(array, locID) {
     for(var i = 0; i < array.length; i++) {
         var dayList = document.getElementById(locID);
