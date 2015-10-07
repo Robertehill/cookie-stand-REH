@@ -41,9 +41,9 @@ p#highlightB{
   font-family:'Special Elite', cursive;
   color: Blue;
 }
-p#san-serif{
+p{
   font-family: Verdana;
-  color: DarkRed;
+
 }
 p#serif{
   font-family: Times;
