@@ -1,3 +1,17 @@
+header{
+  background-color: pink;
+}
+figure img#salmon-logo{
+ display: block;
+  margin: 0px auto;
+  width: 400px;
+}
+h2#nameOfCompany{
+  text-align: center;
+}
+h5#slogan{
+  text-align: center;
+}
 p#highlightG{
   font-family:'Special Elite', cursive;
   color: Green;
@@ -18,8 +32,8 @@ body{
   background-color: LightGrey;
 
 }
-h3{
-  font-family: Verdana;
+h2{
+  font-family:'Special Elite', cursive;
   color: DarkRed;
 }
 h5{
