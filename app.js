@@ -26,7 +26,7 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
 var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
 var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
-var bellSq = new CookieStand('Bellevue', 20, 48, 3.3);
+var bellSq = new CookieStand('Bellevue Square', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
 
 function makeUL(array, locID) {

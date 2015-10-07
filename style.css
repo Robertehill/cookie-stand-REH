@@ -12,6 +12,19 @@ h2#nameOfCompany{
 h5#slogan{
   text-align: center;
 }
+div#hours{
+  float: left;
+}
+div#history{
+  float: right;
+  width: 800px;
+  background-color: white;
+  padding: 10px;
+}
+div#hours li{
+  padding: 8px;
+}
+
 p#highlightG{
   font-family:'Special Elite', cursive;
   color: Green;
@@ -29,7 +42,7 @@ p#serif{
   color: #666699;
 }
 body{
-  background-color: LightGrey;
+  background-color: LightBlue;
 
 }
 h2{
