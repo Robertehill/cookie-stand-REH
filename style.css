@@ -20,9 +20,17 @@ div#history{
   width: 800px;
   background-color: white;
   padding: 10px;
+  overflow: scroll;
+  height: 400px;
+
+
 }
 div#hours li{
   padding: 8px;
+}
+div#merch{
+position: relative;
+clear: left;
 }
 
 p#highlightG{
