@@ -8,14 +8,24 @@ p{
   font-family: Verdana;
 }
 table{
-  /*border: 2px;*/
+  border: 1px solid;
+border-collapse: collapse;
 }
-th, td, tr{
+th, td{
   padding: 7px;
+  border: 1px solid;
+border-collapse: collapse;
 }
 td{
+   text-align: right;
+}
+tr.even{
+  background-color: LightGrey;
+}
+tr{
+  padding: 7px;
+  border: 1px solid;
 
- text-align: right;
 }
 body#salesBG{
   background-color: white;
@@ -31,9 +41,6 @@ h2#nameOfCompany{
 h5#slogan{
   text-align: center;
 }
-/*div#hours{
-  float: left;
-}*/
 div#history{
 
   position: relative;
@@ -55,10 +62,8 @@ div#hours li{
 }
 div#merch{
 position: relative;
-/*clear: left;*/
 bottom: 400px;
 }
-
 p#green{
   font-family: Times, serif;
   color: Green;
@@ -67,12 +72,10 @@ p#blue{
   font-family: Times, serif;
   color: Blue;
 }
-
 p#serif{
   font-family: Times, serif;
   color: #666699;
 }
-
 h2{
   font-family:'Special Elite', cursive;
   color: DarkRed;
