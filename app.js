@@ -21,7 +21,7 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
       dailyCookies += this.totalCookiePerHour();
       // console.log('Cookie count ' + dailyCookies);
     };
-    // Store cookieTotal to be passed to list
+    // Store cookieTotal to be passed to table
     this.cookieTotal = dailyCookies;
     return dailyCookies;
   };
@@ -33,15 +33,18 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     place.appendChild(row);
 
     for(var i = 0; i < array.length; i++) {
-      // trying to target the even rows created but it's targeting all rows
-        if(i % 2 === 0){
-        row.className = "even";
-      }
         var hour = row;
         var data = document.createElement('td');
         data.appendChild(document.createTextNode(array[i]));
         hour.appendChild(data);
     };
+    //attemping to target every other row...not working
+    // for (var i = 0; i < row.rowIndex.length; i++) {
+    //   if(row.rowIndex[i] % 2 === 0){
+    //     row.className = 'even';
+    //   }
+
+    // };
     var totalData = document.createElement('td');
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
