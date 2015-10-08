@@ -10,10 +10,11 @@ p{
 table{
   /*border: 2px;*/
 }
-th, td{
+th, td, tr{
   padding: 7px;
 }
 td{
+
  text-align: right;
 }
 body#salesBG{
