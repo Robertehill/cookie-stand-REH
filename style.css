@@ -1,5 +1,23 @@
 header{
-  background-color: pink;
+  background-color: Pink;
+}
+body{
+  background-color: LightBlue;
+}
+p{
+  font-family: Verdana;
+}
+table{
+  /*border: 2px;*/
+}
+th, td{
+  padding: 7px;
+}
+td{
+ text-align: right;
+}
+body#salesBG{
+  background-color: white;
 }
 figure img#salmon-logo{
  display: block;
@@ -31,6 +49,8 @@ div#history img{
 }
 div#hours li{
   padding: 8px;
+  color: Blue;
+  font-family:'Special Elite', cursive;
 }
 div#merch{
 position: relative;
@@ -38,27 +58,20 @@ position: relative;
 bottom: 400px;
 }
 
-p#highlightG{
-  font-family:'Special Elite', cursive;
+p#green{
+  font-family: Times, serif;
   color: Green;
 }
-p#highlightB{
-  font-family:'Special Elite', cursive;
+p#blue{
+  font-family: Times, serif;
   color: Blue;
 }
-p{
 
-  font-family: Verdana;
-
-}
 p#serif{
-  font-family: Times;
+  font-family: Times, serif;
   color: #666699;
 }
-body{
-  background-color: LightBlue;
 
-}
 h2{
   font-family:'Special Elite', cursive;
   color: DarkRed;
@@ -68,10 +81,10 @@ h5{
   color: #666699;
 }
 li{
-  font-family:'Special Elite', cursive;
+  font-family: Times, serif;
 color: Blue;
 }
 ul{
-  font-family:'Special Elite', cursive;
+  font-family: Times, serif;
   color: Green;
 }
