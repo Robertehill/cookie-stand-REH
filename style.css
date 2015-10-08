@@ -1,25 +1,80 @@
-p#highlightG{
-  font-family:'Special Elite', cursive;
-  color: Green;
-}
-p#highlightB{
-  font-family:'Special Elite', cursive;
-  color: Blue;
-}
-p#san-serif{
-  font-family: Verdana;
-  color: DarkRed;
-}
-p#serif{
-  font-family: Times;
-  color: #666699;
+header{
+  background-color: Pink;
 }
 body{
-  background-color: LightGrey;
-
+  background-color: LightBlue;
 }
-h3{
+p{
   font-family: Verdana;
+}
+table{
+  /*border: 2px;*/
+}
+th, td, tr{
+  padding: 7px;
+}
+td{
+
+ text-align: right;
+}
+body#salesBG{
+  background-color: white;
+}
+figure img#salmon-logo{
+ display: block;
+  margin: 0px auto;
+  width: 400px;
+}
+h2#nameOfCompany{
+  text-align: center;
+}
+h5#slogan{
+  text-align: center;
+}
+/*div#hours{
+  float: left;
+}*/
+div#history{
+
+  position: relative;
+  left: 450px;
+  bottom: 220px;
+  width: 800px;
+  background-color: white;
+  padding: 15px;
+  overflow: scroll;
+  height: 400px;
+}
+div#history img{
+  width: 800px;
+}
+div#hours li{
+  padding: 8px;
+  color: Blue;
+  font-family:'Special Elite', cursive;
+}
+div#merch{
+position: relative;
+/*clear: left;*/
+bottom: 400px;
+}
+
+p#green{
+  font-family: Times, serif;
+  color: Green;
+}
+p#blue{
+  font-family: Times, serif;
+  color: Blue;
+}
+
+p#serif{
+  font-family: Times, serif;
+  color: #666699;
+}
+
+h2{
+  font-family:'Special Elite', cursive;
   color: DarkRed;
 }
 h5{
@@ -27,10 +82,10 @@ h5{
   color: #666699;
 }
 li{
-  font-family:'Special Elite', cursive;
+  font-family: Times, serif;
 color: Blue;
 }
 ul{
-  font-family:'Special Elite', cursive;
+  font-family: Times, serif;
   color: Green;
 }
