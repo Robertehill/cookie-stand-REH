@@ -25,8 +25,9 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     this.cookieTotal = dailyCookies;
     return dailyCookies;
   };
-
+  //called this here so it adds values to the hour array and saves the total when an intance of the object is created
   this.totalCookiePerDay();
+
   function makeTable(loc, array, total) {
     //Make new table row with the name of the store
     var place = document.getElementById('sales');
@@ -49,13 +50,13 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
 
     // };
 
-    // Add total cookies to add to table
+    // Add total cookies to table
     var totalData = document.createElement('td');
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
 
   }
-  //call makeTable here
+  //call makeTable here to pass values to the table when an instance of the object is created
   makeTable(this.standLoc, this.hour, this.cookieTotal)
 }
 //hard wired stores
@@ -64,7 +65,7 @@ var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
 var bellSq = new CookieStand('Bellevue Square', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
-// Start form/button
+// Start form/button area
 var storeSubmit = function(e) {
   e.preventDefault();
   var storeLoc = document.getElementById('storeLoc');
@@ -95,7 +96,7 @@ var storeSubmit = function(e) {
 };
 var addButton = document.getElementById("addButton");
 addButton.addEventListener('click', storeSubmit, false);
-//end form/button
+//end form/button area
 
 
 
