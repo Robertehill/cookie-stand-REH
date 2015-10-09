@@ -41,21 +41,23 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
         var data = document.createElement('td');
         data.appendChild(document.createTextNode(array[i]));
         hour.appendChild(data);
-         //attemping to target every other row...not working
-      // var x = document.getElementsByTagName("tr");
-      // var y = x[i].rowIndex;
-      // if ( y % 2 === 0) {
-      //     y.className = 'even';
-      // }
-
-    };
+      };
     // Add total cookies to table
     var totalData = document.createElement('td');
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
   }
   //call makeTable here to pass values to the table when an instance of the object is created
-  makeTable(this.standLoc, this.hour, this.cookieTotal)
+  makeTable(this.standLoc, this.hour, this.cookieTotal);
+
+  //even rows gets shaded
+  var table = document.getElementById("sales");
+  var rows = table.getElementsByTagName("tr");
+  for(i = 0; i < rows.length; i++){
+      if(i % 2 == 0){
+          rows[i].className = "even";
+      }
+  };
 
 }
 //hard wired stores
@@ -97,6 +99,8 @@ var storeSubmit = function(e) {
 var addButton = document.getElementById("addButton");
 addButton.addEventListener('click', storeSubmit, false);
 //end form/button area
+
+
 
 
 
