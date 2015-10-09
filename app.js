@@ -21,11 +21,11 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
       dailyCookies += this.totalCookiePerHour();
       // console.log('Cookie count ' + dailyCookies);
     };
-    // Store cookieTotal to be passed to table
+    // Store cookieTotal to be passed to html table
     this.cookieTotal = dailyCookies;
     return dailyCookies;
   };
-  //called this here so it adds values to the hour array and saves the total when an intance of the object is created
+  //called here so it adds values to the hour array and saves the total when an intance of the object is created
   this.totalCookiePerDay();
 
   function makeTable(loc, array, total) {
@@ -47,7 +47,7 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
   }
-  //call makeTable here to pass values to the table when an instance of the object is created
+  //call makeTable here to pass values to the html table when an instance of the object is created
   makeTable(this.standLoc, this.hour, this.cookieTotal);
 
   //even rows gets shaded
@@ -58,7 +58,6 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
           rows[i].className = "even";
       }
   };
-
 }
 //hard wired stores
 var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
@@ -84,7 +83,7 @@ var storeSubmit = function(e) {
   }
   //check the make sure min is smaller than max
   else if(minCust.value > maxCust.value){
-    return alert('Please make sure the Minimum Customers is smaller than Maximum Customers');
+    return alert('Please make sure the Minimum Customers is a smaller number than Maximum Customers');
   }
   else
   //here for debuging
@@ -94,10 +93,14 @@ var storeSubmit = function(e) {
   console.log('avg cookie per customer for ' + storeLoc.value +' = ' +avgCookies.value);
   //end debug
   var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
+  storeLoc.value = null;
+  minCust.value = null;
+  maxCust.value = null;
+  avgCookies.value = null;
 
 };
 var addButton = document.getElementById("addButton");
-addButton.addEventListener('click', storeSubmit, false);
+addButton.addEventListener('click', storeSubmit);
 //end form/button area
 
 
