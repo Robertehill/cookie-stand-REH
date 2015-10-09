@@ -65,6 +65,7 @@ var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
 var bellSq = new CookieStand('Bellevue Square', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
+
 // Start form/button area
 var storeSubmit = function(e) {
   e.preventDefault();
@@ -77,14 +78,14 @@ var storeSubmit = function(e) {
       return alert('Please enter a value in each box');
   }
   //check that all inputs that should be numbers are really numbers
-  if (isNaN(minCust.value) || isNaN(maxCust.value) || isNaN(avgCookies.value)) {
+  else if (isNaN(minCust.value) || isNaN(maxCust.value) || isNaN(avgCookies.value)) {
       return alert('Please enter numbers in the boxes for Min/Max Customers and Average cookie per Customer');
   }
   //check the make sure min is smaller than max
-  if(minCust.value > maxCust.value)
-  {
+  else if(minCust.value > maxCust.value){
     return alert('Please make sure the Minimum Customers is smaller than Maximum Customers');
   }
+  else
   //here for debuging
   console.log('new store location = ' + storeLoc.value);
   console.log('min customers for ' + storeLoc.value +' = ' + minCust.value);
