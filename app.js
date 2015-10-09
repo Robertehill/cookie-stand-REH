@@ -93,6 +93,8 @@ var storeSubmit = function(e) {
   console.log('avg cookie per customer for ' + storeLoc.value +' = ' +avgCookies.value);
   //end debug
   var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
+
+  //clear all input boxes here to prevent duplicate stores on table
   storeLoc.value = null;
   minCust.value = null;
   maxCust.value = null;

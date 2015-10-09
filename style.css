@@ -31,7 +31,11 @@ tr.even{
 tr{
   padding: 7px;
   border: 1px solid;
+  vertical-align: baseline;
 
+}
+#addButton:hover {
+  background-color: #666666;
 }
 body#salesBG{
   background-color: white;
