@@ -41,23 +41,22 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
         var data = document.createElement('td');
         data.appendChild(document.createTextNode(array[i]));
         hour.appendChild(data);
+         //attemping to target every other row...not working
+      // var x = document.getElementsByTagName("tr");
+      // var y = x[i].rowIndex;
+      // if ( y % 2 === 0) {
+      //     y.className = 'even';
+      // }
+
     };
-    //attemping to target every other row...not working
-    // for (var i = 0; i < row.rowIndex.length; i++) {
-    //   if(row.rowIndex[i] % 2 === 0){
-    //     row.className = 'even';
-    //   }
-
-    // };
-
     // Add total cookies to table
     var totalData = document.createElement('td');
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
-
   }
   //call makeTable here to pass values to the table when an instance of the object is created
   makeTable(this.standLoc, this.hour, this.cookieTotal)
+
 }
 //hard wired stores
 var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );

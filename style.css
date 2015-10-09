@@ -7,14 +7,20 @@ body{
 p{
   font-family: Verdana;
 }
+/*Table start*/
 table{
-  border: 1px solid;
-border-collapse: collapse;
+  /*border: 1px solid;*/
+  border-collapse: collapse;
 }
-th, td{
+th{
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 7px;
+}
+td{
   padding: 7px;
   border: 1px solid;
-border-collapse: collapse;
+  border-collapse: collapse;
 }
 td{
    text-align: right;
