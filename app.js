@@ -25,6 +25,7 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     this.cookieTotal = dailyCookies;
     return dailyCookies;
   };
+
   this.totalCookiePerDay();
   function makeTable(loc, array, total) {
     var place = document.getElementById('sales');
@@ -57,6 +58,22 @@ var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
 var bellSq = new CookieStand('Bellevue Square', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
+// Start of form control
+var storeSubmit = function(e) {
+  e.preventDefault();
+  var storeLoc = document.getElementById('storeLoc');
+
+  if (!storeLoc.value) {
+      return alert('Location not entered');
+  }
+  console.log(storeLoc.value);
+   //var newstore = new CookieStand(event.target.storeLoc.value, event.target.minCust.value);
+
+};
+var addButton = document.getElementById("addButton");
+addButton.addEventListener('click', storeSubmit, false);
+
+
 
 
 

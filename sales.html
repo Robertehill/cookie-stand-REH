@@ -5,25 +5,20 @@
     <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' />
   </head>
   <body id="salesBG">
+<p>
+    <form id="storeData">
+    <label for="storeLocLabel">Location Name: </label>
+    <input id="storeLoc" type="text" /><br />
+    <label for="minCustLabel">Minimum Customers Per Hour: </label>
+    <input id="minCust" type="text" /><br />
+    <label for="maxCustLabel">Maximum Customers Per Hour: </label>
+    <input id="maxCust" type="text" /><br />
+    <label for="avgCookiesLabel">Average Cookies Per Customer: </label>
+    <input id="avgCookies" type="text" /><br />
 
-  <form>
-      <p>Location Name: 
-        <input type='text' name='location' />
-      </p>
-      <p>Minimum Customers Per Hour: 
-        <input type='text' name='minCust' />
-      </p>
-      <p>Maximum Customers Per Hour: 
-        <input type='text' name='maxCust' />
-      </p>
-      <p>Average Cookies Per Customer: 
-        <input type='text' name='avCookies' />
-      </p>
-      <p>
-        <button id='addButton'>Add</button>
-      </p>
-
+    <button id="addButton" type="click">Add Store</button>
   </form>
+</p>
 
     <table id="sales">
         <th>Store Location</th>
