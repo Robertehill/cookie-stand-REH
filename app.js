@@ -28,11 +28,13 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
 
   this.totalCookiePerDay();
   function makeTable(loc, array, total) {
+    //Make new table row with the name of the store
     var place = document.getElementById('sales');
     var row = document.createElement('tr');
     row.appendChild(document.createTextNode(loc));
     place.appendChild(row);
 
+    //add random hourly numbers to table
     for(var i = 0; i < array.length; i++) {
         var hour = row;
         var data = document.createElement('td');
@@ -46,32 +48,43 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
     //   }
 
     // };
+
+    // Add total cookies to add to table
     var totalData = document.createElement('td');
     totalData.appendChild(document.createTextNode(total));
     hour.appendChild(totalData);
 
   }
+  //call makeTable here
   makeTable(this.standLoc, this.hour, this.cookieTotal)
 }
+//hard wired stores
 var pikePlace = new CookieStand('Pike Place Markert', 17, 88, 5.2 );
 var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
 var bellSq = new CookieStand('Bellevue Square', 20, 48, 3.3);
 var alki = new CookieStand('Alki Beach', 3, 24, 2.6);
-// Start of form control
+// Start form/button
 var storeSubmit = function(e) {
   e.preventDefault();
   var storeLoc = document.getElementById('storeLoc');
+  var minCust = document.getElementById('minCust');
+  var maxCust = document.getElementById('maxCust');
+  var avgCookie = document.getElementById('avgCookies');
 
-  if (!storeLoc.value) {
-      return alert('Location not entered');
+  if (!storeLoc.value || !minCust.value || !maxCust.value || !avgCookie.value ) {
+      return alert('Please enter a value in each box');
   }
   console.log(storeLoc.value);
-   //var newstore = new CookieStand(event.target.storeLoc.value, event.target.minCust.value);
+  console.log(minCust.value);
+  console.log(maxCust.value);
+  console.log(avgCookie.value);
+  var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookie.value);
 
 };
 var addButton = document.getElementById("addButton");
 addButton.addEventListener('click', storeSubmit, false);
+//end form/button
 
 
 
