@@ -75,19 +75,21 @@ var storeSubmit = function(e) {
   if (!storeLoc.value || !minCust.value || !maxCust.value || !avgCookies.value ) {
       return alert('Please enter a value in each box');
   }
-  //check that all input that should be numbers are really numbers
+  //check that all inputs that should be numbers are really numbers
   if (isNaN(minCust.value) || isNaN(maxCust.value) || isNaN(avgCookies.value)) {
       return alert('Please enter numbers in the boxes for Min/Max Customers and Average cookie per Customer');
   }
-  //check the the input for min is smaller than the input for max
+  //check the make sure min is smaller than max
   if(minCust.value > maxCust.value)
   {
     return alert('Please make sure the Minimum Customers is smaller than Maximum Customers');
   }
-  console.log(storeLoc.value);
-  console.log(minCust.value);
-  console.log(maxCust.value);
-  console.log(avgCookies.value);
+  //here for debuging
+  console.log('new store location = ' + storeLoc.value);
+  console.log('min customers for ' + storeLoc.value +' = ' + minCust.value);
+  console.log('max customers for ' + storeLoc.value +' = ' +maxCust.value);
+  console.log('avg cookie per customer for ' + storeLoc.value +' = ' +avgCookies.value);
+  //end debug
   var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
 
 };
