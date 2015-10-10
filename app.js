@@ -66,7 +66,7 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
   };
 
 }
-//hard wired stores. Need to push to list array here to avoid duplicates when replacing.
+//hard wired stores
 var pikePlace = new CookieStand('Pike Place Market', 17, 88, 5.2 );
 var seaTac = new CookieStand('SeaTac Airport', 6, 44, 1.2 );
 var southcenter = new CookieStand('Southcenter Mall', 11, 38, 1.9);
@@ -102,7 +102,7 @@ var storeSubmit = function(e) {
             var child = document.getElementById(storeLoc.value.toLowerCase());
             parent.removeChild(child);
             // console.log(storeLoc.value.toLowerCase() +' "replace" if statement');
-            // replace list array value here
+            // remove value from list arrary
             listOfStands.splice( i, 1 );
             var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
             storeLoc.value = null;
@@ -129,7 +129,7 @@ var storeSubmit = function(e) {
   };
   //end of replace section
 
-  //create new store and push to list array
+  //create new store
   var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
 //here for debugging
   console.log('new store location = ' + storeLoc.value);
