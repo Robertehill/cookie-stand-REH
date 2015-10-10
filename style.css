@@ -1,5 +1,6 @@
 header{
   background-color: Pink;
+  text-align: center;
 }
 body{
   background-color: LightBlue;
@@ -7,25 +8,38 @@ body{
 p{
   font-family: Verdana;
 }
+/*Table start*/
 table{
-  border: 1px solid;
-border-collapse: collapse;
+  position: relative;
+  left: 450px;
+  bottom: 220px;
+  width: 800px;
+  border-collapse: collapse;
 }
-th, td{
+th{
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  padding: 7px;
+}
+td{
   padding: 7px;
   border: 1px solid;
-border-collapse: collapse;
+  border-collapse: collapse;
 }
 td{
    text-align: right;
 }
 tr.even{
-  background-color: LightGrey;
+  background-color: #E6E6E6;
 }
 tr{
   padding: 7px;
   border: 1px solid;
+  vertical-align: baseline;
 
+}
+#addButton:hover {
+  background-color: #666666;
 }
 body#salesBG{
   background-color: white;
@@ -35,14 +49,7 @@ figure img#salmon-logo{
   margin: 0px auto;
   width: 400px;
 }
-h2#nameOfCompany{
-  text-align: center;
-}
-h5#slogan{
-  text-align: center;
-}
 div#history{
-
   position: relative;
   left: 450px;
   bottom: 220px;
@@ -52,13 +59,21 @@ div#history{
   overflow: scroll;
   height: 400px;
 }
-div#history img{
+.fam{
   width: 800px;
 }
 div#hours li{
   padding: 8px;
   color: Blue;
   font-family:'Special Elite', cursive;
+
+}
+div#sgInfo{
+  width: 800px;
+  background-color: white;
+  padding: 15px;
+  overflow: scroll;
+  height: 400px;
 }
 div#merch{
 position: relative;
