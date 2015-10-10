@@ -54,7 +54,6 @@ var CookieStand = function(standLoc, minCust, maxCust, avgCookiePerCust) {
  //even rows get shaded
   var table = document.getElementById("sales");
   var rows = table.getElementsByTagName("tr");
-
   for(i = 0; i < rows.length; i++){
       if(i % 2 == 0){
           rows[i].className = "even";
@@ -128,14 +127,12 @@ var storeSubmit = function(e) {
       }
   };
   //end of replace section
-
-  //create new store
   var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
-//here for debugging
-  console.log('new store location = ' + storeLoc.value);
-  console.log('min customers for ' + storeLoc.value +' = ' + minCust.value);
-  console.log('max customers for ' + storeLoc.value +' = ' +maxCust.value);
-  console.log('avg cookie per customer for ' + storeLoc.value +' = ' +avgCookies.value);
+  //here for debugging
+  // console.log('new store location = ' + storeLoc.value);
+  // console.log('min customers for ' + storeLoc.value +' = ' + minCust.value);
+  // console.log('max customers for ' + storeLoc.value +' = ' +maxCust.value);
+  // console.log('avg cookie per customer for ' + storeLoc.value +' = ' +avgCookies.value);
   //end debug
   //clear all input boxes here to prevent duplicate stores on table
   storeLoc.value = null;

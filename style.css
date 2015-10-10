@@ -1,5 +1,6 @@
 header{
   background-color: Pink;
+  text-align: center;
 }
 body{
   background-color: LightBlue;
@@ -9,7 +10,10 @@ p{
 }
 /*Table start*/
 table{
-  /*border: 1px solid;*/
+  position: relative;
+  left: 450px;
+  bottom: 220px;
+  width: 800px;
   border-collapse: collapse;
 }
 th{
@@ -45,14 +49,7 @@ figure img#salmon-logo{
   margin: 0px auto;
   width: 400px;
 }
-h2#nameOfCompany{
-  text-align: center;
-}
-h5#slogan{
-  text-align: center;
-}
 div#history{
-
   position: relative;
   left: 450px;
   bottom: 220px;
@@ -62,13 +59,21 @@ div#history{
   overflow: scroll;
   height: 400px;
 }
-div#history img{
+.fam{
   width: 800px;
 }
 div#hours li{
   padding: 8px;
   color: Blue;
   font-family:'Special Elite', cursive;
+
+}
+div#sgInfo{
+  width: 800px;
+  background-color: white;
+  padding: 15px;
+  overflow: scroll;
+  height: 400px;
 }
 div#merch{
 position: relative;
