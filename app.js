@@ -103,7 +103,7 @@ var storeSubmit = function(e) {
             // console.log(storeLoc.value.toLowerCase() +' "replace" if statement');
             // remove value from list arrary
             listOfStands.splice( i, 1 );
-            var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
+            var newstore = new CookieStand(storeLoc.value, parseInt(minCust.value), parseInt(maxCust.value), parseInt(avgCookies.value));
             storeLoc.value = null;
             minCust.value = null;
             maxCust.value = null;
@@ -113,7 +113,7 @@ var storeSubmit = function(e) {
           }
           else{
             //create newstore here if the user choose not to replace store
-            var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
+            var newstore = new CookieStand(storeLoc.value, parseInt(minCust.value), parseInt(maxCust.value), parseInt(avgCookies.value));
             listOfStands.push(newstore.standLoc.toLowerCase());
             storeLoc.value = null;
             minCust.value = null;
