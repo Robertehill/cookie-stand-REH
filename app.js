@@ -127,7 +127,7 @@ var storeSubmit = function(e) {
       }
   };
   //end of replace section
-  var newstore = new CookieStand(storeLoc.value, minCust.value, maxCust.value, avgCookies.value);
+  var newstore = new CookieStand(storeLoc.value, parseInt(minCust.value), parseInt(maxCust.value), parseInt(avgCookies.value));
   //here for debugging
   // console.log('new store location = ' + storeLoc.value);
   // console.log('min customers for ' + storeLoc.value +' = ' + minCust.value);
